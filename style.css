@@ -1,0 +1,109 @@
+:root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --text-color: #ffffff;
+            --bg-color: #4c526d;
+            --display-bg: #3c4a64;
+            --button-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color:#3c4a64;
+            color: var(--text-color);
+
+        }
+
+        .calculator {
+            width: 320px;
+            background-color: rgb(42, 71, 95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .calculator:hover {
+            transform: translateY(-5px);
+        }
+
+        .display {
+            padding: 20px;
+            text-align: right;
+            background-color: black;
+            position: relative;
+        }
+        .previous-operand {
+            font-size: 1rem;
+            color: #fcfcfc;
+            height: 1.2rem;
+            overflow: hidden;
+        }
+
+        .current-operand {
+            font-size: 2.5rem;
+             color: #fcfcfc;
+            font-weight: 300;
+            margin-top: 0.5rem;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background-color: #173147;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            padding: 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            background-color: rgb(42, 30, 85);
+            transition: all 0.2s ease;
+            color: #ffffff;
+        }
+
+        button:hover {
+            background-color: #39468d;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .operator {
+            color: greenyellow;
+            font-weight: bold;
+        }
+
+        .equals {
+            background-color: rgb(52, 51, 100) ;
+            color: white;
+        }
+
+        .equals:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .clear, .delete {
+            color: greenyellow;
+        }
+
+        .span-2 {
+            grid-column: span 2;
+        }
